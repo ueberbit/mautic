@@ -1,0 +1,7 @@
+mautic_drupal.settings_form:
+  path: '/admin/config/system/mautic'
+  defaults:
+    _form: '\Drupal\mautic_drupal\Form\MauticDrupalSettingsForm'
+    _title: 'Mautic Settings'
+  requirements:
+    _permission: 'administer site configuration'
