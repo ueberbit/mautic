@@ -1,12 +1,12 @@
 <?php
 /**
- * File: mautic-drupal/Block/MauticDrupalTrackingCodeAndFormEmbed.php
+ * File: mautic-drupal/Block/MauticDrupalTrackingCodeAndFormEmbedBlock.php
  */
 
-namespace Drupal\mautic_drupal\Block;
+namespace Drupal\mautic_drupal\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Session\AccountInterface;
+
 
 /**
  * Class TrackingCode
@@ -18,7 +18,7 @@ use Drupal\Core\Session\AccountInterface;
  *   category = @Translation("System"),
  * )
  */
-class MauticDrupalTrackingCodeAndFormEmbed extends BlockBase {
+class MauticDrupalTrackingCodeAndFormEmbedBlock extends BlockBase {
   /**
    * {@inheritdoc}
    */
@@ -53,7 +53,7 @@ class MauticDrupalTrackingCodeAndFormEmbed extends BlockBase {
 
     return array (
       '#type' => 'markup',
-      '#markup' => '<img style="display:none" src="' . $mautic_base_url . '/mtracking.gif?d=' . $encoded_attributes . '" />' . $form_js
+      '#markup' => $this->t('<img style="display:none" src="' . $mautic_base_url . '/mtracking.gif?d=' . $encoded_attributes . '" />' . $form_js)
     );
   }
 }
