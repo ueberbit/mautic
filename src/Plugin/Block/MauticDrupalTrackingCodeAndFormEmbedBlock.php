@@ -53,7 +53,7 @@ class MauticDrupalTrackingCodeAndFormEmbedBlock extends BlockBase {
 
     return array (
       '#type' => 'markup',
-      '#markup' => $this->t('<img style="display:none" src="' . $mautic_base_url . '/mtracking.gif?d=' . $encoded_attributes . '" />' . $form_js)
+      '#markup' => $form_js
     );
   }
 }
