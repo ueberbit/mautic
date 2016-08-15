@@ -1,6 +1,6 @@
 mautic_drupal_tracking_code:
   version: VERSION
   js:
-    js/mautic_drupal_tracking_code.js: {}
+    js/mautic_drupal_tracking_code.js: { weight: -18 }
   dependencies:
     - core/drupalSettings
