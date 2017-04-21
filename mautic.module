@@ -12,16 +12,16 @@
  *
  * Displays help and module information.
  *
- * @param path 
+ * @param path
  *   Which path of the site we're using to display help
- * @param arg 
+ * @param arg
  *   Array that holds the current path as returned from arg() function
  *
  *
  * @return string $output
  *   String that holds the help text
  */
-function mautic_drupal_help($path, $arg) {
+function mautic_help($path, $arg) {
   switch ($path) {
     case "admin/help#mautic":
       $output = '<h3>' . t("Mautic integration") . '</h3>';
@@ -49,12 +49,12 @@ function mautic_drupal_help($path, $arg) {
  *
  * @param array $page
  */
-function mautic_drupal_page_attachments_alter(array &$page) {
-  $config = \Drupal::service('config.factory')->get('mautic_drupal.settings');
+function mautic_page_attachments_alter(array &$page) {
+  $config = \Drupal::service('config.factory')->get('mautic.settings');
   $mautic_url = trim($config->get('base_url'), ' \t\n\r\0\x0B/');
 
   if ($mautic_url != '') {
-    $page['#attached']['drupalSettings']['mautic_drupal']['mautic_drupal_tracking_code']['base_url'] = $mautic_url;
-    $page['#attached']['library'][] = 'mautic_drupal/mautic_drupal_tracking_code';
+    $page['#attached']['drupalSettings']['mautic']['mautic_tracking_code']['base_url'] = $mautic_url;
+    $page['#attached']['library'][] = 'mautic/mautic_tracking_code';
   }
 }

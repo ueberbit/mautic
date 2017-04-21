@@ -4,7 +4,7 @@ window.onload = function() {
         var settingsElement = document.querySelector('head > script[type="application/json"][data-drupal-selector="drupal-settings-json"], body > script[type="application/json"][data-drupal-selector="drupal-settings-json"]');
         window.drupalSettings = (settingsElement !== null) ? JSON.parse(settingsElement.textContent) : {};
     })();
-    url = drupalSettings.mautic_drupal.mautic_drupal_tracking_code.base_url + '/mtc.js';
+    url = drupalSettings.mautic.mautic_tracking_code.base_url + '/mtc.js';
     (function (w, d, t, u, n, a, m) {
         w['MauticTrackingObject'] = n;
         w[n] = w[n] || function () {
