@@ -1,0 +1,6 @@
+mautic_tracking_code:
+  version: VERSION
+  js:
+    js/mautic_tracking_code.js: { preprocess: false }
+  dependencies:
+    - core/drupalSettings

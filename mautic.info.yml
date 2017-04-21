@@ -1,0 +1,6 @@
+name: Mautic Drupal Integration
+description: Mautic tracking (and forms)
+package: Mautic
+core: 8.x
+type: module
+configure: mautic.settings_form
